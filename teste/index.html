@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Prática de Float</title>
+    <style>
+        .card {
+            width: 400px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* A imagem vai flutuar para a esquerda */
+        .avatar {
+            float: right;
+            width: 100px;
+            height: 100px;
+            background-color: #00a884;
+            color: white;
+            text-align: center;
+            line-height: 100px; /* Centraliza o texto verticalmente */
+            font-weight: bold;
+            margin-right: 15px; /* Dá um respiro entre a imagem e o texto */
+            border-radius: 50%;
+        }
+
+        .texto {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        /* Truque importante para o container "enxergar" o float */
+        .card::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Elemento flutuante -->
+        <div class="avatar">FOTO</div>
+        
+        <!-- Texto que vai contornar o elemento flutuante -->
+        <div class="texto">
+            <p>Olá! Este é um exemplo prático de como o <b>float</b> funciona. Repare que a caixa verde flutuou para a esquerda, e todo este texto ao lado preencheu o espaço automaticamente, contornando o elemento.</p>
+        </div>
+    </div>
+
+</body>
+</html>
