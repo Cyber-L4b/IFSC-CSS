@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+
+    <style>
+        *{margin: 0px; padding: 1rem;}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    min-height: 100%;
+    padding: 1rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.base1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.base2 {
+    display: flex;
+    justify-content: center;
+}
+
+.base3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cores {
+    display: flex;
+    height: 10em;
+    width: 10em;
+    align-items: center;
+    justify-content: center;
+}
+        .cores{
+            display: flex; /*Ativa flex*/
+            height: 10em; /*Tamanho Vertical de caixa*/
+            width: 10em; /*Tamanho horizontal de caixa*/
+            align-items: center; /*centraliza texto Vertical*/
+            justify-content: center;  /*centraliza texto Horizontal*/
+        }
+
+         /*Em resumo separei tudo em container e fui criando alinhamento e espaço*/
+    </style>
+</head>
+<body>
+    <div class="base1">
+        <div class="cores" style="background-color: red;">Box 1</div>
+        <div class="cores" style="background-color: yellow;">Box 2</div>
+    </div>
+
+    <div class="base2">
+        <div class="cores" style="background-color:deeppink;">Box 3</div>
+    </div>
+
+     <div class="base3">
+        <div class="cores" style="background-color: blueviolet;">Box 4</div>
+        <div class="cores" style="background-color: green;">Box 5</div>
+     </div>
+
+
+</body>
+</html>
