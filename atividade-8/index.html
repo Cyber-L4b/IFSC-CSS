@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 8</title>
+    <style>
+
+        body{
+            margin: 0px;
+            min-height: 100vh;
+            background-color: beige;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .quadro{
+
+        }
+
+        .bandeira{
+            width: 600px;
+            height: 400px;
+            background-color: white;
+            border: 1px solid black;
+            margin: 3rem;
+        }
+
+        #japao{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #japao div{
+            background-color:brown;
+            width: 240px;
+            height: 240px;
+            border-radius: 140px;
+        }
+
+        #alemanha .cor1{
+            background-color: black;
+            width: 100%;
+            height: 133px;
+        }
+
+        #alemanha .cor2{
+            background-color: #DD0000;
+            width: 100%;
+            height: 133px;
+        }
+
+        #alemanha .cor3{
+            background-color: #FFCC00;
+            width: 100%;
+            height: 133px;
+        }
+
+        #holanda .cor1{
+            background-color: #C8102E;
+            width: 100%;
+            height: 133px;
+        }
+        #holanda .cor2{
+            background-color: white;
+            width: 100%;
+            height: 133px;
+        }
+
+        #holanda .cor3{
+            background-color: #003DA5;
+            width: 100%;
+            height: 133px;
+        }
+
+        #italia{
+            display: flex;
+        }
+
+        #italia .cor1{
+            background-color: #009246;
+            width: 200px;
+        }
+        #italia .cor2{
+            background-color: white;
+            width: 200px;
+        }
+
+        #italia .cor3{
+            background-color: #CE2B37;
+            width: 200px;
+        }
+        
+        #brasil{
+            background-color: #009c3b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #brasil .cor2{
+            min-width: 480px;
+            min-height: 300px; 
+            background-color: #ffdf00;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #brasil .cor3{
+            min-width: 200px;
+            min-height: 200px; 
+            background-color: #002776;
+            position: absolute;
+            border-radius: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <ul>
+        <li><a href="#japao">Japão</a></li>
+        <li><a href="#alemanha">Alemanha</a></li>
+        <li><a href="#holanda">Holanda</a></li>
+        <li><a href="#italia">Itália</a></li>
+        <li><a href="#brasil">Brasil</a></li>
+    </ul>
+    <div class="quadro">
+        
+        <div class="bandeira" id="japao">
+            <div></div>
+        </div>
+
+        <div class="bandeira" id="alemanha">
+            <div class="cor1"></div>
+            <div class="cor2"></div>
+            <div class="cor3"></div>
+        </div>
+
+        <div class="bandeira" id="holanda">
+            <div class="cor1"></div>
+            <div class="cor2"></div>
+            <div class="cor3"></div>
+        </div>
+
+        <div class="bandeira" id="italia">
+            <div class="cor1"></div>
+            <div class="cor2"></div>
+            <div class="cor3"></div>
+        </div>
+
+        <div class="bandeira" id="brasil">
+            <div class="cor2"></div>
+            <div class="cor3"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
