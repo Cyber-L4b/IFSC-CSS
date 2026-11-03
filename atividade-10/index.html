@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10</title>
+
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+        
+        main{
+            height: 100vh;
+            background: linear-gradient(to bottom, white, #002776);
+            display: flex;
+            flex-direction: column;
+        } 
+        .nuvem{
+            height: 10rem;
+            width: 20rem;
+            padding-top: 10rem;
+        }
+
+        .barco{
+            height: 10rem;
+            width: 18rem;
+            margin-top: 30rem;
+            position: absolute;
+            animation: balancarBarco 2s ease-in-out infinite;
+        }
+
+        .mar{
+            height: 200px;
+            background-color:dodgerblue;
+            margin-top: auto;
+        }
+
+        @keyframes balancarBarco {
+        0%, 100% {
+        transform: translateX(0);
+        }
+        50% {
+        transform: translateX(-10px);
+        }
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <main>
+        <img src="nuvem.png" alt="A nuvem" class="nuvem">
+        <img src="barco.png" alt="O barco" class="barco">
+        <div class="mar"></div>
+
+    </main>
+
+    
+</body>
+</html>
