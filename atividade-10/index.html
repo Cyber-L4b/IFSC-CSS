@@ -10,6 +10,7 @@
             padding: 0;
             margin: 0;
             height: 100%;
+            overflow: hidden;
         }
         
         main{
@@ -17,49 +18,99 @@
             background: linear-gradient(to bottom, white, #002776);
             display: flex;
             flex-direction: column;
+            position: relative;
         } 
+
+        
         .nuvem{
-            height: 10rem;
-            width: 20rem;
-            padding-top: 10rem;
+            width: 120px;
+            height: 40px;
+            background: #ffffff;
+            border-radius: 50px;
+            position: absolute;
+            top: 80px;
+            left: -150px; 
+            box-shadow: 
+                35px -20px 0 15px #ffffff, 
+                75px -5px 0 5px #ffffff,
+                25px 10px 0 0 #ffffff; 
+            animation: atravessarCeu 18s linear infinite; 
         }
 
         .barco{
             height: 10rem;
             width: 18rem;
-            margin-top: 30rem;
             position: absolute;
+            bottom: 180px; 
+            left: 30%;
+            z-index: 10;
             animation: balancarBarco 2s ease-in-out infinite;
         }
 
         .mar{
             height: 200px;
-            background-color:dodgerblue;
+            background-color: dodgerblue;
             margin-top: auto;
+            position: relative;
         }
 
         @keyframes balancarBarco {
-        0%, 100% {
-        transform: translateX(0);
-        }
-        50% {
-        transform: translateX(-10px);
-        }
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
         }
 
+        @keyframes atravessarCeu {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(100vw + 200px)); 
+            }
+        }
 
+        .mar::before {
+            content: "";
+            position: absolute;
+            top: -15px;
+            left: 0;
+            width: 200%;
+            height: 30px;
+            background: radial-gradient(circle, #4da6ff 10px, transparent 11px);
+            background-size: 30px 30px;
+            animation: ondaMovimento 4s linear infinite;
+        }
+
+        .mar::after {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 200%;
+            height: 30px;
+            background: radial-gradient(circle, #0099ff 8px, transparent 9px);
+            background-size: 25px 25px;
+            opacity: 0.7;
+            animation: ondaMovimento 3s linear infinite reverse;
+        }
+
+        @keyframes ondaMovimento {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
     </style>
-
 </head>
 <body>
 
     <main>
-        <img src="nuvem.png" alt="A nuvem" class="nuvem">
+        <div class="nuvem"></div>
+        
         <img src="barco.png" alt="O barco" class="barco">
         <div class="mar"></div>
-
     </main>
-
     
 </body>
 </html>
